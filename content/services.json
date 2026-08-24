@@ -1,0 +1,11 @@
+{
+  "title": "Services",
+  "services": [
+    {
+      "name": "Individual Therapy",
+      "description": "One-to-one sessions focused on your goals.",
+      "duration": "50 minutes",
+      "price": "£70 per session"
+    }
+  ]
+}
