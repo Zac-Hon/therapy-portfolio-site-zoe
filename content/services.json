@@ -3,7 +3,13 @@
   "services": [
     {
       "name": "Individual Therapy",
-      "description": "One-to-one sessions focused on your goals.",
+      "description": "One-to-one sessions focused on your goals and experiences.",
+      "duration": "50 minutes",
+      "price": "£70 per session"
+    },
+    {
+      "name": "Online Therapy",
+      "description": "Secure video sessions for clients who prefer remote work.",
       "duration": "50 minutes",
       "price": "£70 per session"
     }
