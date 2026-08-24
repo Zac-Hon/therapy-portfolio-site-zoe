@@ -101,6 +101,22 @@ collections:
         label: "Site Copy"
         name: "site"
         fields:
+          - label: "Navigation"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - { name: "home", label: "Home", widget: "string" }
+              - { name: "about", label: "About", widget: "string" }
+              - { name: "services", label: "Services", widget: "string" }
+              - { name: "approach", label: "Approach", widget: "string" }
+              - { name: "whoIWorkWith", label: "Who I Work With", widget: "string" }
+              - { name: "qualifications", label: "Qualifications", widget: "string" }
+              - { name: "contact", label: "Contact", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { name: "ctaLabel", label: "Button Label", widget: "string" }
           - label: "About Section"
             name: "about"
             widget: "object"
@@ -114,6 +130,9 @@ collections:
             fields:
               - { name: "eyebrow", label: "Eyebrow", widget: "string" }
               - { name: "intro", label: "Introduction", widget: "text" }
+              - { name: "durationLabel", label: "Duration Label", widget: "string" }
+              - { name: "priceLabel", label: "Price Label", widget: "string" }
+              - { name: "ctaLabel", label: "CTA Label", widget: "string" }
           - label: "Contact Section"
             name: "contact"
             widget: "object"
@@ -121,6 +140,13 @@ collections:
               - { name: "eyebrow", label: "Eyebrow", widget: "string" }
               - { name: "title", label: "Title", widget: "string" }
               - { name: "intro", label: "Introduction", widget: "text" }
+              - { name: "emailLabel", label: "Email Label", widget: "string" }
+              - { name: "locationLabel", label: "Location Label", widget: "string" }
+              - { name: "phoneLabel", label: "Phone Label", widget: "string" }
+              - { name: "nameLabel", label: "Name Field Label", widget: "string" }
+              - { name: "formEmailLabel", label: "Email Field Label", widget: "string" }
+              - { name: "messageLabel", label: "Message Field Label", widget: "string" }
+              - { name: "submitLabel", label: "Submit Button Label", widget: "string" }
           - label: "Footer"
             name: "footer"
             widget: "object"

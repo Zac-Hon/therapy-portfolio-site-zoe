@@ -137,7 +137,7 @@ export default function OnePage() {
                 fontSize: '1.1rem',
                 }}
             >
-                Book a Session
+                {site.hero.ctaLabel}
             </Button>
             </Box>
           </Reveal>
@@ -319,12 +319,12 @@ export default function OnePage() {
                     >
                       {s.duration && (
                         <Typography variant="body2">
-                          <strong>Duration</strong><br />{s.duration}
+                          <strong>{site.services.durationLabel}</strong><br />{s.duration}
                         </Typography>
                       )}
                       {s.price && (
                         <Typography variant="body2" sx={{ ml: { sm: 3 } }}>
-                          <strong>Investment</strong><br />{s.price}
+                          <strong>{site.services.priceLabel}</strong><br />{s.price}
                         </Typography>
                       )}
                     </Box>
@@ -340,7 +340,7 @@ export default function OnePage() {
                         fontSize: '0.9rem',
                       }}
                     >
-                      Discuss this option
+                      {site.services.ctaLabel}
                       <Box
                         className="service-arrow"
                         sx={{
@@ -525,14 +525,14 @@ export default function OnePage() {
             </Typography>
             <Box sx={{ borderTop: '1px solid #C6DCD8', pt: 2.5, maxWidth: 360 }}>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                <strong>Email</strong><br />{settings.email}
+                <strong>{site.contact.emailLabel}</strong><br />{settings.email}
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                <strong>Location</strong><br />{settings.location}
+                <strong>{site.contact.locationLabel}</strong><br />{settings.location}
               </Typography>
               {settings.phone && (
                 <Typography variant="body2" color="text.secondary">
-                  <strong>Phone</strong><br />{settings.phone}
+                  <strong>{site.contact.phoneLabel}</strong><br />{settings.phone}
                 </Typography>
               )}
             </Box>
@@ -540,12 +540,12 @@ export default function OnePage() {
 
           <Box component="form" onSubmit={handleSubmit} sx={{ display: 'grid', gap: { xs: 2, sm: 3 } }}>
             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, minmax(0, 1fr))' }, gap: { xs: 2, sm: 3 } }}>
-              <TextField fullWidth required name="name" label="Name" variant="outlined" />
-              <TextField fullWidth required name="email" label="Email" variant="outlined" type="email" />
+              <TextField fullWidth required name="name" label={site.contact.nameLabel} variant="outlined" />
+              <TextField fullWidth required name="email" label={site.contact.formEmailLabel} variant="outlined" type="email" />
             </Box>
-            <TextField fullWidth required name="message" label="Message" variant="outlined" multiline rows={6} />
+            <TextField fullWidth required name="message" label={site.contact.messageLabel} variant="outlined" multiline rows={6} />
             <Button type="submit" variant="contained" size="large" sx={{ justifySelf: { xs: 'stretch', sm: 'start' }, px: 4, py: 1.5 }}>
-              Send Message
+              {site.contact.submitLabel}
             </Button>
           </Box>
           </Box>

@@ -11,15 +11,16 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import settings from '../../content/settings.json';
+import site from '../../content/site.json';
 
 const navItems = [
-  { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'services', label: 'Services' },
-  { id: 'approach', label: 'Approach' },
-  { id: 'who-i-work-with', label: 'Who I Work With' },
-  { id: 'qualifications', label: 'Qualifications' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'home', label: site.navigation.home },
+  { id: 'about', label: site.navigation.about },
+  { id: 'services', label: site.navigation.services },
+  { id: 'approach', label: site.navigation.approach },
+  { id: 'who-i-work-with', label: site.navigation.whoIWorkWith },
+  { id: 'qualifications', label: site.navigation.qualifications },
+  { id: 'contact', label: site.navigation.contact },
 ];
 
 export default function Nav() {

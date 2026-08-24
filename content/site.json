@@ -1,7 +1,22 @@
 {
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "approach": "Approach",
+    "whoIWorkWith": "Who I Work With",
+    "qualifications": "Qualifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "ctaLabel": "Book a Session"
+  },
   "services": {
     "eyebrow": "Ways to work together",
-    "intro": "Thoughtful, confidential support shaped around your needs and pace."
+    "intro": "Thoughtful, confidential support shaped around your needs and pace.",
+    "durationLabel": "Duration",
+    "priceLabel": "Investment",
+    "ctaLabel": "Discuss this option"
   },
   "about": {
     "eyebrow": "A little about Zoe",
@@ -11,7 +26,14 @@
   "contact": {
     "eyebrow": "Start a conversation",
     "title": "Contact",
-    "intro": "You can reach out using the form below or email directly at"
+    "intro": "You can reach out using the form below or email directly at",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "phoneLabel": "Phone",
+    "nameLabel": "Name",
+    "formEmailLabel": "Email",
+    "messageLabel": "Message",
+    "submitLabel": "Send Message"
   },
   "footer": {
     "description": "Integrative therapy in {location}",
