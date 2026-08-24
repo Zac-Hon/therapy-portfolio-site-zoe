@@ -8,47 +8,59 @@ public_folder: "/uploads"
 collections:
   - name: "home"
     label: "Home Page"
-    file: "content/home.json"
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "headline", label: "Headline", widget: "string" }
-      - { name: "subheadline", label: "Subheadline", widget: "string" }
-      - { name: "body", label: "Body (HTML)", widget: "text" }
+    files:
+      - file: "content/home.json"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "headline", label: "Headline", widget: "string" }
+          - { name: "subheadline", label: "Subheadline", widget: "string" }
+          - { name: "body", label: "Body (HTML)", widget: "text" }
 
   - name: "about"
     label: "About Page"
-    file: "content/about.json"
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "body", label: "Body (HTML)", widget: "text" }
+    files:
+      - file: "content/about.json"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "body", label: "Body (HTML)", widget: "text" }
 
   - name: "services"
     label: "Services"
-    file: "content/services.json"
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - {
-          name: "services",
-          label: "Services",
-          widget: "list",
-          fields:
-            [
-              { name: "name", label: "Service Name", widget: "string" },
-              { name: "description", label: "Description", widget: "text" },
-              { name: "duration", label: "Duration", widget: "string", required: false },
-              { name: "price", label: "Price", widget: "string", required: false },
-            ],
-        }
+    files:
+      - file: "content/services.json"
+        label: "Services"
+        name: "services"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
+          - {
+              name: "services",
+              label: "Services",
+              widget: "list",
+              fields:
+                [
+                  { name: "name", label: "Service Name", widget: "string" },
+                  { name: "description", label: "Description", widget: "text" },
+                  { name: "duration", label: "Duration", widget: "string", required: false },
+                  { name: "price", label: "Price", widget: "string", required: false },
+                ],
+            }
 
   - name: "settings"
     label: "Site Settings"
-    file: "content/settings.json"
-    fields:
-      - { name: "therapist_name", label: "Therapist Name", widget: "string" }
-      - { name: "location", label: "Location", widget: "string" }
-      - { name: "email", label: "Email", widget: "string" }
-      - { name: "phone", label: "Phone", widget: "string", required: false }
-      - { name: "profile_image", label: "Profile Image", widget: "image", required: false }
+    files:
+      - file: "content/settings.json"
+        label: "Site Settings"
+        name: "settings"
+        fields:
+          - { name: "therapist_name", label: "Therapist Name", widget: "string" }
+          - { name: "location", label: "Location", widget: "string" }
+          - { name: "email", label: "Email", widget: "string" }
+          - { name: "phone", label: "Phone", widget: "string", required: false }
+          - { name: "profile_image", label: "Profile Image", widget: "image", required: false }
 
   - name: "professional"
     label: "Professional Profile"
@@ -81,3 +93,37 @@ collections:
               - { name: "title", label: "Title", widget: "string" }
               - { name: "body", label: "Body", widget: "text" }
               - { name: "details", label: "Details", widget: "list", field: { name: "detail", label: "Detail", widget: "string" } }
+
+  - name: "site"
+    label: "Site Copy"
+    files:
+      - file: "content/site.json"
+        label: "Site Copy"
+        name: "site"
+        fields:
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+              - { name: "supportingText", label: "Supporting Text", widget: "text" }
+              - { name: "ctaLabel", label: "CTA Label", widget: "string" }
+          - label: "Services Section"
+            name: "services"
+            widget: "object"
+            fields:
+              - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+              - { name: "intro", label: "Introduction", widget: "text" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "intro", label: "Introduction", widget: "text" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { name: "description", label: "Description (use {location})", widget: "string" }
+              - { name: "closingNote", label: "Closing Note", widget: "string" }

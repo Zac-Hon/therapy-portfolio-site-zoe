@@ -6,6 +6,7 @@ import about from '../../content/about.json';
 import servicesData from '../../content/services.json';
 import settings from '../../content/settings.json';
 import professional from '../../content/professional.json';
+import site from '../../content/site.json';
 
 import {
   Box,
@@ -44,8 +45,8 @@ function Reveal({ children, delay = 0 }) {
       ref={elementRef}
       sx={{
         opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0) scale(1)' : 'translateY(36px) scale(0.985)',
-        filter: visible ? 'blur(0)' : 'blur(1.5px)',
+        transform: visible ? 'translateY(0) scale(1)' : 'translateY(16px) scale(0.995)',
+        filter: visible ? 'blur(0)' : 'blur(0.5px)',
         transition: `opacity 900ms cubic-bezier(.22, 1, .36, 1) ${delay}ms, transform 900ms cubic-bezier(.22, 1, .36, 1) ${delay}ms, filter 900ms ease ${delay}ms`,
         '@media (prefers-reduced-motion: reduce)': {
           opacity: 1,
@@ -206,13 +207,13 @@ export default function OnePage() {
         >
           <Box>
             <Typography variant="overline" color="primary" sx={{ letterSpacing: '0.14em', fontWeight: 700 }}>
-              A little about Zoe
+              {site.about.eyebrow}
             </Typography>
             <Typography variant="h2" sx={{ mt: 1, mb: 2 }}>
               {about.title}
             </Typography>
             <Typography color="text.secondary" sx={{ maxWidth: 280, lineHeight: 1.6 }}>
-              A considered, collaborative space for understanding and change.
+              {site.about.supportingText}
             </Typography>
           </Box>
 
@@ -233,7 +234,7 @@ export default function OnePage() {
               endIcon={<ArrowForwardIcon />}
               sx={{ mt: 3, px: 0, '&:hover': { backgroundColor: 'transparent', color: 'primary.dark' } }}
             >
-              Get in touch
+              {site.about.ctaLabel}
             </Button>
           </Box>
         </Box>
@@ -251,13 +252,13 @@ export default function OnePage() {
               color="primary"
               sx={{ letterSpacing: '0.14em', fontWeight: 700 }}
             >
-              Ways to work together
+              {site.services.eyebrow}
             </Typography>
             <Typography variant="h2" sx={{ mt: 1, mb: 2, fontWeight: 600 }}>
               {servicesData.title}
             </Typography>
             <Typography color="text.secondary" sx={{ fontSize: '1.08rem', lineHeight: 1.7 }}>
-              Thoughtful, confidential support shaped around your needs and pace.
+              {site.services.intro}
             </Typography>
           </Box>
           </Reveal>
@@ -513,13 +514,13 @@ export default function OnePage() {
           >
           <Box sx={{ pt: { md: 2 } }}>
             <Typography variant="overline" color="primary" sx={{ letterSpacing: '0.14em', fontWeight: 700 }}>
-              Start a conversation
+              {site.contact.eyebrow}
             </Typography>
             <Typography variant="h2" sx={{ mt: 1, mb: 2 }}>
-              Contact
+              {site.contact.title}
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 430, mb: 4 }}>
-              You can reach out using the form below or email directly at{' '}
+              {site.contact.intro}{' '}
               <a href={`mailto:${settings.email}`}>{settings.email}</a>.
             </Typography>
             <Box sx={{ borderTop: '1px solid #C6DCD8', pt: 2.5, maxWidth: 360 }}>
@@ -568,7 +569,7 @@ export default function OnePage() {
           <Box>
             <Typography sx={{ fontWeight: 700, mb: 0.5 }}>{settings.therapist_name}</Typography>
             <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.72)' }}>
-              Integrative therapy in {settings.location}
+              {site.footer.description.replace('{location}', settings.location)}
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2.5 }}>
@@ -584,7 +585,7 @@ export default function OnePage() {
         </Box>
         <Box sx={{ maxWidth: 1060, mx: 'auto', px: { xs: 2, sm: 3 }, mt: 2, pt: 1.5, borderTop: '1px solid rgba(255,255,255,0.16)' }}>
           <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.58)' }}>
-            © {new Date().getFullYear()} {settings.therapist_name}. Confidential enquiries welcome.
+            © {new Date().getFullYear()} {settings.therapist_name}. {site.footer.closingNote}
           </Typography>
         </Box>
       </Box>

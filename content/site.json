@@ -1,0 +1,20 @@
+{
+  "services": {
+    "eyebrow": "Ways to work together",
+    "intro": "Thoughtful, confidential support shaped around your needs and pace."
+  },
+  "about": {
+    "eyebrow": "A little about Zoe",
+    "supportingText": "A considered, collaborative space for understanding and change.",
+    "ctaLabel": "Get in touch"
+  },
+  "contact": {
+    "eyebrow": "Start a conversation",
+    "title": "Contact",
+    "intro": "You can reach out using the form below or email directly at"
+  },
+  "footer": {
+    "description": "Integrative therapy in {location}",
+    "closingNote": "Confidential enquiries welcome."
+  }
+}
