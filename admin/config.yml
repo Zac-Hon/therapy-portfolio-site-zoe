@@ -49,3 +49,35 @@ collections:
       - { name: "email", label: "Email", widget: "string" }
       - { name: "phone", label: "Phone", widget: "string", required: false }
       - { name: "profile_image", label: "Profile Image", widget: "image", required: false }
+
+  - name: "professional"
+    label: "Professional Profile"
+    files:
+      - file: "content/professional.json"
+        label: "Professional Profile"
+        name: "professional"
+        fields:
+          - label: "Therapeutic Approach"
+            name: "approach"
+            widget: "object"
+            fields:
+              - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+              - { name: "principles", label: "Principles", widget: "list", field: { name: "principle", label: "Principle", widget: "string" } }
+          - label: "Who I Work With"
+            name: "whoIWorkWith"
+            widget: "object"
+            fields:
+              - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+              - { name: "concerns", label: "Concerns", widget: "list", field: { name: "concern", label: "Concern", widget: "string" } }
+          - label: "Qualifications"
+            name: "qualifications"
+            widget: "object"
+            fields:
+              - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+              - { name: "details", label: "Details", widget: "list", field: { name: "detail", label: "Detail", widget: "string" } }
